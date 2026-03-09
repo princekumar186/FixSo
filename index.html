@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixso - Home Services</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">FixSo</div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Providers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Book Trusted Home Services</h1>
+        <p>AC Repair, Cleaning, Electrician and more</p>
+        <input type="text" id="search" oninput="searchService()" placeholder="Search services...">
+
+        <p id="noResult" style="display:none;color:red;">
+            Service not available yet (In Progress)
+        </p>
+    </section>
+
+    <!-- Categories Section -->
+
+    <section class="categories">
+
+        <h2>Service Categories</h2>
+
+        <div class="category-grid">
+
+            <div class="category">
+                <i class="fa-solid fa-snowflake"></i>
+                <p>AC Repair</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-bolt"></i>
+                <p>Electrician</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-broom"></i>
+                <p>Cleaning</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-faucet"></i>
+                <p>Plumbing</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-scissors"></i>
+                <p>Salon</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-paint-roller"></i>
+                <p>Painting</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- How It Works -->
+
+    <section class="how">
+
+        <h2>How Fixso Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>Search</h3>
+                <p>Find the service you need</p>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h3>Book</h3>
+                <p>Select date and time</p>
+            </div>
+
+            <div class="step">
+                <i class="fa-solid fa-user-check"></i>
+                <h3>Relax</h3>
+                <p>Professional arrives at your home</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Customer Reviews -->
+
+    <section class="reviews">
+
+        <h2>Customer Reviews</h2>
+
+        <div class="review-grid">
+
+            <div class="review-card">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Very fast AC repair service.</p>
+                <h4>Rahul Sharma</h4>
+            </div>
+
+            <div class="review-card">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Electrician arrived on time.</p>
+                <h4>Priya Verma</h4>
+            </div>
+
+            <div class="review-card">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Cleaning service was excellent.</p>
+                <h4>Amit Singh</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="services">
+        <h2>Popular Services</h2>
+
+        <div id="serviceGrid" class="service-grid"></div>
+
+    </section>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2 id="serviceName"></h2>
+
+            <input type="text" placeholder="Your Name">
+            <input type="date">
+            <input type="time">
+
+            <button class="confirm-btn">Confirm Booking</button>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Satyandra kumar</h3>
+                    <p>CEO of Fixso</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">About</a></li>
+                        <li><a href="#providers">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">AC Repair</a></li>
+                        <li><a href="#">Electrician</a></li>
+                        <li><a href="#">Plumbing</a></li>
+                        <li><a href="#">Cleaning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <p>Email: support@fixso.com</p>
+                        <p>Phone: +91 8969812809</p>
+                        <p>India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FixSo. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/services.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/modal.js"></script>
+
+</body>
+
+</html>
