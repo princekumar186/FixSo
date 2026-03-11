@@ -1,0 +1,66 @@
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6f8;
+}
+
+.admin{
+display:flex;
+height:100vh;
+}
+
+.sidebar{
+width:250px;
+background:#1f2937;
+color:white;
+padding:20px;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar li{
+padding:15px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:10px;
+}
+
+.sidebar li:hover{
+background:#374151;
+}
+
+.main{
+flex:1;
+padding:30px;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+button{
+padding:8px 15px;
+border:none;
+background:#2563eb;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}

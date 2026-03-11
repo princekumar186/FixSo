@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FixSo User Dashboard</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f8;
+margin:0;
+}
+
+.navbar{
+background:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#ff5a00;
+}
+
+.dashboard{
+padding:40px;
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+background:#ff5a00;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#e14f00;
+}
+
+</style>
+
+<script>
+
+/* Protect Page */
+
+if(localStorage.getItem("role") !== "user"){
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="logo">FixSo</div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+<div class="dashboard">
+
+<h1>Welcome to FixSo</h1>
+
+<p>You are logged in as User.</p>
+
+<p>Here you can book home services.</p>
+
+<a href="index.html">
+<button>Browse Services</button>
+</a>
+
+</div>
+
+<script>
+
+function logout(){
+
+localStorage.removeItem("role");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

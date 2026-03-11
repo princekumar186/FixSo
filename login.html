@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FixSo Login</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f4f6f8;
+font-family:Arial;
+}
+
+.login-box{
+background:white;
+padding:40px;
+width:350px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.login-box h2{
+margin-bottom:20px;
+}
+
+.login-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+outline:none;
+}
+
+.login-box button{
+width:100%;
+padding:10px;
+background:#ff5a00;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+.login-box button:hover{
+background:#e04e00;
+}
+
+#error{
+margin-top:10px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>FixSo Login</h2>
+
+<input type="text" id="username" placeholder="Username" required>
+
+<input type="password" id="password" placeholder="Password" required>
+
+<button onclick="login()">Login</button>
+
+<p id="error" style="color:red"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value.trim();
+let pass=document.getElementById("password").value.trim();
+
+/* ADMIN LOGIN */
+
+if(user==="admin" && pass==="fixso123"){
+
+localStorage.setItem("role","admin");
+
+window.location.href="admin/admin.html";
+
+}
+
+/* USER LOGIN */
+
+else if(user==="user" && pass==="user123"){
+
+localStorage.setItem("role","user");
+
+window.location.href="user.html";
+
+}
+
+else{
+
+document.getElementById("error").innerText="Invalid username or password";
+
+}
+
+}
+
+/* ENTER KEY LOGIN */
+
+document.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+login();
+}
+
+});
+
+</script>
+
+</body>
+</html>

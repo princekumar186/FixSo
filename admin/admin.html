@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FixSo Admin Panel</title>
+
+<link rel="stylesheet" href="../assets/css/admin.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script>
+
+/* Protect Admin Page */
+
+if(localStorage.getItem("role") !== "admin"){
+window.location.href="../login.html";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="admin">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>FixSo Admin</h2>
+
+<ul>
+
+<li onclick="loadDashboard()">
+<i class="fa fa-chart-line"></i> Dashboard
+</li>
+
+<li onclick="loadServices()">
+<i class="fa fa-tools"></i> Services
+</li>
+
+<li onclick="loadBookings()">
+<i class="fa fa-calendar"></i> Bookings
+</li>
+
+<li onclick="loadUsers()">
+<i class="fa fa-users"></i> Users
+</li>
+
+<li onclick="logout()">
+<i class="fa fa-right-from-bracket"></i> Logout
+</li>
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main">
+
+<div id="content"></div>
+
+</div>
+
+</div>
+
+<script src="../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,44 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixso - Home Services</title>
+
+    <title>FixSo - Home Services</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <header class="navbar">
+    <header class="navbar" id="home">
+
         <div class="logo">FixSo</div>
 
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#">Providers</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><button class="login-btn">Login</button></li>
+
+                <li>
+                    <button class="login-btn" onclick="window.location.href='login.html'">
+                        Login
+                    </button>
+                </li>
+
             </ul>
         </nav>
+
     </header>
 
     <section class="hero">
+
         <h1>Book Trusted Home Services</h1>
+
         <p>AC Repair, Cleaning, Electrician and more</p>
-        <input type="text" id="search" oninput="searchService()" placeholder="Search services...">
+
+        <input type="text" id="search" placeholder="Search services..." oninput="searchService()">
 
         <p id="noResult" style="display:none;color:red;">
             Service not available yet (In Progress)
         </p>
-    </section>
 
-    <!-- Categories Section -->
+    </section>
 
     <section class="categories">
 
@@ -80,13 +101,9 @@
 
     </section>
 
-
-
-    <!-- How It Works -->
-
     <section class="how">
 
-        <h2>How Fixso Works</h2>
+        <h2>How FixSo Works</h2>
 
         <div class="steps">
 
@@ -111,10 +128,6 @@
         </div>
 
     </section>
-
-
-
-    <!-- Customer Reviews -->
 
     <section class="reviews">
 
@@ -144,8 +157,8 @@
 
     </section>
 
+    <section id="services" class="services">
 
-    <section class="services">
         <h2>Popular Services</h2>
 
         <div id="serviceGrid" class="service-grid"></div>
@@ -153,68 +166,96 @@
     </section>
 
     <div id="bookingModal" class="modal">
+
         <div class="modal-content">
 
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" onclick="closeModal()">×</span>
 
             <h2 id="serviceName"></h2>
 
-            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Name" required>
+
             <input type="date">
+
             <input type="time">
 
-            <button class="confirm-btn">Confirm Booking</button>
+            <button class="confirm-btn">
+                Confirm Booking
+            </button>
 
         </div>
+
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
+
         <div class="container">
+
             <div class="footer-content">
+
                 <div class="footer-section">
-                    <h3>Satyandra kumar</h3>
-                    <p>CEO of Fixso</p>
+                    <h3>Satyandra Kumar</h3>
+                    <p>CEO of FixSo</p>
                 </div>
+
                 <div class="footer-section">
+
                     <h4>Quick Links</h4>
+
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#services">About</a></li>
-                        <li><a href="#providers">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#">Providers</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
+
                 </div>
+
                 <div class="footer-section">
+
                     <h4>Services</h4>
+
                     <ul>
                         <li><a href="#">AC Repair</a></li>
                         <li><a href="#">Electrician</a></li>
                         <li><a href="#">Plumbing</a></li>
                         <li><a href="#">Cleaning</a></li>
                     </ul>
+
                 </div>
+
                 <div class="footer-section">
-                        <h4>Contact</h4>
-                        <p>Email: support@fixso.com</p>
-                        <p>Phone: +91 8969812809</p>
-                        <p>India</p>
+
+                    <h4>Contact</h4>
+
+                    <p>Email: support@fixso.com</p>
+                    <p>Phone: +91 8969812809</p>
+                    <p>India</p>
+
                 </div>
+
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 FixSo. All rights reserved.</p>
+
+                <p>© 2026 FixSo. All rights reserved.</p>
+
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                     <a href="#">Sitemap</a>
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
-
     <script src="assets/js/services.js"></script>
+
     <script src="assets/js/ui.js"></script>
+
     <script src="assets/js/modal.js"></script>
 
 </body>
